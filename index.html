@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Chester's - Quiet Luxury Furniture</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Manrope:wght@200..800&amp;family=Lusitana:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined,wght@100..700&amp;display=swap" rel="stylesheet">
+<style>
+@font-face {
+  font-family: 'proxima-nova';
+  src: local('Arial');
+}
+
+.page-shell {
+  --footer-background: #000000;
+  --footer-text: #eae0e0;
+  --footer-muted: #d5c2c3;
+  --footer-accent: #f1b8bd;
+  --footer-border: rgba(80, 68, 69, 0.2);
+  --footer-subtle-border: rgba(80, 68, 69, 0.1);
+  --footer-content-width: 1440px;
+  --footer-mobile-margin: 24px;
+  --footer-desktop-margin: 64px;
+  --footer-gutter: 32px;
+  --footer-section-gap: 120px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background: #161213;
+  color: var(--footer-text);
+  font-family: Manrope, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+.page-main {
+  flex-grow: 1;
+}
+
+.footer_new {
+  width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  background:#351419;
+  border-top: 1px solid var(--footer-border);
+  color: var(--footer-text);
+}
+
+.footer_new__columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--footer-gutter);
+  max-width: var(--footer-content-width);
+  margin: 0 auto 40px ;
+  padding: 0 var(--footer-mobile-margin);
+  box-sizing: border-box;
+}
+
+.footer_new__column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer_new__heading {
+  margin: 0;
+  color: var(--footer-text);
+  font-family: Lusitana, serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.footer_new__link-list,
+.footer_new__location-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer_new__link,
+.footer_new__location-title,
+.footer_new__address,
+.footer_new__hours {
+  font-family: 'proxima-nova', sans-serif;
+}
+
+.footer_new__link {
+  color: var(--footer-muted);
+  font-size: 16px;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: color 300ms;
+}
+
+.footer_new__link:hover,
+.footer_new__directions:hover {
+  color: var(--footer-accent);
+}
+
+.footer_new__location {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer_new__location + .footer_new__location {
+  margin-top: 16px;
+}
+
+.footer_new__location-title {
+  margin: 0;
+  color: var(--footer-text);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.footer_new__address,
+.footer_new__hours,
+.footer_new__directions {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.footer_new__address {
+  color: rgba(213, 194, 195, 0.7);
+  line-height: 1.6;
+}
+
+.footer_new__hours {
+  color: rgba(213, 194, 195, 0.5);
+  line-height: 1.6;
+}
+
+.footer_new__directions {
+  margin-top: 4px;
+  color: #a68f7a;
+  line-height: 1.6;
+  text-decoration: underline;
+  transition: color 300ms;
+}
+.footer_new__brand {
+        padding-right: 40px;
+        padding-left: 40px;
+  border-top: 1px solid var(--footer-subtle-border);
+}
+
+.footer_new__wordmark {
+  margin: 0;
+  color: var(--footer-text);
+  font-family: 'EB Garamond', serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.3em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.footer_new__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: var(--footer-content-width);
+  margin: 0 auto;
+  padding: 32px var(--footer-mobile-margin) 0;
+  border-top: 1px solid var(--footer-subtle-border);
+  box-sizing: border-box;
+}
+
+.footer_new__copyright,
+.footer_new__legal-link {
+  margin: 0;
+  color: rgba(213, 194, 195, 0.5);
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer_new__legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.footer_new__legal-link {
+  text-decoration: none;
+  transition: color 300ms;
+}
+
+.footer_new__legal-link:hover {
+  color: var(--footer-accent);
+}
+
+@media (min-width: 768px) {
+  .footer_new__columns {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    padding-right: var(--footer-desktop-margin);
+    padding-left: var(--footer-desktop-margin);
+  }
+
+.footer_new__brand {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+  .footer_new__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: var(--footer-desktop-margin);
+    padding-left: var(--footer-desktop-margin);
+  }
+}
+</style>
+</head>
+<body class="page-shell">
+<main class="page-main"></main>
+<footer class="footer_new">
+  <div class="footer_new__columns">
+    <section class="footer_new__column">
+      <h4 class="footer_new__heading">SHOP</h4>
+      <ul class="footer_new__link-list">
+        <li><a class="footer_new__link" href="#">Sofas</a></li>
+        <li><a class="footer_new__link" href="#">Armchairs &amp; Single Seaters</a></li>
+        <li><a class="footer_new__link" href="#">Benches &amp; Ottomans</a></li>
+        <li><a class="footer_new__link" href="#">Dining Chairs &amp; Bar Stools</a></li>
+        <li><a class="footer_new__link" href="#">Executive Swivel Chairs</a></li>
+        <li><a class="footer_new__link" href="#">Upholstery &amp; Finishes</a></li>
+      </ul>
+    </section>
+    <section class="footer_new__column">
+      <h4 class="footer_new__heading">DOWNLOADS</h4>
+      <ul class="footer_new__link-list">
+        <li><a class="footer_new__link" href="#">Brand Catalogue</a></li>
+        <li><a class="footer_new__link" href="#">Objet Catalogue</a></li>
+      </ul>
+    </section>
+    <section class="footer_new__column">
+      <h4 class="footer_new__heading">INFO</h4>
+      <ul class="footer_new__link-list">
+        <li><a class="footer_new__link" href="#">Contact Us</a></li>
+        <li><a class="footer_new__link" href="#">Trade</a></li>
+        <li><a class="footer_new__link" href="#">Privacy Policy</a></li>
+        <li><a class="footer_new__link" href="#">Terms of Use</a></li>
+      </ul>
+    </section>
+    <section class="footer_new__column">
+      <h4 class="footer_new__heading">VISIT US</h4>
+      <div class="footer_new__location-list">
+        <div class="footer_new__location">
+          <h5 class="footer_new__location-title">The Shop</h5>
+          <p class="footer_new__address">91/1, Infantry Rd, next to ICICI<br>Bank,<br>Tasker Town, Shivaji Nagar,<br>Bengaluru, Karnataka 560001</p>
+          <p class="footer_new__hours">Mon–Sat, 10:00am–7:00pm</p>
+          <a class="footer_new__directions" href="#">Copy Directions</a>
+        </div>
+        <div class="footer_new__location">
+          <h5 class="footer_new__location-title">The Office</h5>
+          <p class="footer_new__address">2nd Floor, Kkmp Building, 16<br>A,<br>Thimmaiah Rd, Vasanth<br>Nagar,<br>Bengaluru, Karnataka 560051</p>
+          <p class="footer_new__hours">Mon–Sat, 10:00am–6:00pm</p>
+          <a class="footer_new__directions" href="#">Copy Directions</a>
+        </div>
+      </div>
+    </section>
+    <section class="footer_new__column">
+      <h4 class="footer_new__heading">STAY CONNECTED</h4>
+      <ul class="footer_new__link-list">
+        <li><a class="footer_new__link" href="#">WhatsApp Us</a></li>
+        <li><a class="footer_new__link" href="#">Email Us</a></li>
+        <li><a class="footer_new__link" href="#">Instagram</a></li>
+        <li><a class="footer_new__link" href="#">LinkedIn</a></li>
+      </ul>
+    </section>
+  </div>
+  <div class="footer_new__brand">
+    <h2 class="footer_new__wordmark">CHESTER'S</h2>
+  </div>
+  <div class="footer_new__bottom">
+    <p class="footer_new__copyright">Copyright 2026, Chester's India</p>
+    <div class="footer_new__legal">
+      <a class="footer_new__legal-link" href="#">Privacy Policy</a>
+      <a class="footer_new__legal-link" href="#">Terms of Use</a>
+      <a class="footer_new__legal-link" href="#">Sitemap</a>
+      <a class="footer_new__legal-link" href="#">Site Credits</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
