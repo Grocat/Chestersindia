@@ -24,16 +24,50 @@
 <meta name="twitter:description" content="Discover Luxury Modern Office Furniture for CEO cabins, boardrooms and reception spaces, made in Bangalore with refined materials. Discuss your project.">
 <meta name="twitter:image" content="https://chestersindia.com/cdn/shop/files/PRESIDENT-OFFICE-SWIVEL-CHAIR-VINTAGE-GREEN-2.jpg?v=1757668575&width=1200">
 
-<!-- ============ FONTS ============
-     Lusitana = brand serif (headings + long-form body). Available on Google Fonts (exact match to the theme's self-hosted Lusitana-Regular).
-     proxima-nova = brand sans (nav / eyebrows / CTAs). Loaded globally by the Chester's Shopify theme via Adobe Fonts, so it is picked up automatically once this page lives on the domain. Montserrat is loaded here only as a close preview fallback and never overrides proxima-nova when present.
+<!-- ============ CHESTER'S INDIA TYPOGRAPHY ============
+     Font faces and typography values verified against https://chestersindia.com/.
+     Keep the original layout, content, images, colours and interactions.
 -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://chestersindia.com" crossorigin>
 <link rel="preconnect" href="https://use.typekit.net" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://p.typekit.net/p.css?s=1&amp;k=eub5hpp&amp;ht=tk&amp;f=175.25136.36537&amp;a=12108081&amp;app=typekit&amp;e=css">
 
 <style>
+@font-face {
+        font-family: 'proxima-nova';
+        src: url('https://use.typekit.net/af/d7ff92/00000000000000007735e609/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+            format('woff2'),
+          url('https://use.typekit.net/af/d7ff92/00000000000000007735e609/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+            format('woff'),
+          url('https://use.typekit.net/af/d7ff92/00000000000000007735e609/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+            format('opentype');
+        font-display: auto;
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: normal;
+      }
+
+@font-face {
+        font-family: 'proxima-nova';
+        src: url('https://use.typekit.net/af/26f7ec/00000000000000007735e605/31/l?subset_id=2&fvd=n5&v=3')
+            format('woff2'),
+          url('https://use.typekit.net/af/26f7ec/00000000000000007735e605/31/d?subset_id=2&fvd=n5&v=3') format('woff'),
+          url('https://use.typekit.net/af/26f7ec/00000000000000007735e605/31/a?subset_id=2&fvd=n5&v=3')
+            format('opentype');
+        font-display: auto;
+        font-style: normal;
+        font-weight: 500;
+        font-stretch: normal;
+      }
+
+@font-face {
+        font-family: 'Lusitana';
+        src: url('https://chestersindia.com/cdn/shop/t/9/assets/Lusitana-Regular.woff2?v=107884916681843808601750971565') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
 /* ============================================================
    CHESTER'S INDIA — design tokens sampled from the live theme
    ============================================================ */
@@ -51,7 +85,7 @@
   --btn-text:#ffffff;
 
   --serif:"Lusitana", Georgia, "Times New Roman", serif;
-  --sans:"proxima-nova","Montserrat","Helvetica Neue",Arial,sans-serif;
+  --sans:"proxima-nova","Helvetica Neue",Arial,sans-serif;
 
   --page-max:1240px;
   --text-max:720px;
@@ -308,13 +342,129 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid cur
   .site-header{min-height:72px;}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;}}
+
+/* ============================================================
+   NAMED SECTION DIVS / LIVE BRAND TYPOGRAPHY
+   Existing classes retain all layout and responsive behaviour.
+   Only font properties are changed below. Text can reflow naturally.
+   ============================================================ */
+.chestersindia-page {
+  --chestersindia-heading-size: 20px;
+  --chestersindia-heading-leading: 30px;
+  --chestersindia-display-size: 36px;
+  --chestersindia-display-leading: 42px;
+  --chestersindia-body-size: 16px;
+  --chestersindia-body-leading: 22px;
+  --chestersindia-small-leading: 20px;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: var(--chestersindia-body-size);
+  line-height: var(--chestersindia-body-leading);
+  letter-spacing: 0;
+}
+
+/* Each existing content section has its own unique styling hook. */
+.chestersindia-hero-section,
+.chestersindia-about-section,
+.chestersindia-spaces-section,
+.chestersindia-products-section,
+.chestersindia-craftsmanship-section,
+.chestersindia-trade-section,
+.chestersindia-faq-section,
+.chestersindia-contact-section {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: var(--chestersindia-body-size);
+  line-height: var(--chestersindia-body-leading);
+  letter-spacing: 0;
+}
+.chestersindia-page .chestersindia-main h1 {
+  font-family: var(--serif);
+  font-size: var(--chestersindia-display-size);
+  line-height: var(--chestersindia-display-leading);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.chestersindia-page .chestersindia-main :is(h2, h3, .faq__q) {
+  font-family: var(--serif);
+  font-size: var(--chestersindia-heading-size);
+  line-height: var(--chestersindia-heading-leading);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.chestersindia-page .chestersindia-main :is(p, .faq__a) {
+  font-family: var(--serif);
+  font-size: var(--chestersindia-body-size);
+  line-height: var(--chestersindia-body-leading);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+/* The theme uses its smaller body-copy style for supporting text. */
+.chestersindia-page .chestersindia-main .process__item p {
+  font-size: 14px;
+  line-height: var(--chestersindia-small-leading);
+}
+.chestersindia-page :is(.header-nav, .chestersindia-navigation-section, .eyebrow, .btn, .link-cta) {
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  letter-spacing: .7px;
+}
+.chestersindia-footer-section :is(h4, h5) {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: .8px;
+}
+.chestersindia-footer-section .footer-intro p {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: .1px;
+}
+.chestersindia-footer-section .footer-cols {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+}
+.chestersindia-footer-section .footer-cols address {
+  font-size: 14px;
+}
+.chestersindia-footer-section .footer-cols address strong {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 400;
+}
+.chestersindia-footer-section :is(.copy, .fb-links) {
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: .7px;
+}
+@media (max-width: 749px) {
+  .chestersindia-page {
+    --chestersindia-heading-size: 20px;
+    --chestersindia-heading-leading: 26px;
+    --chestersindia-display-size: 24px;
+    --chestersindia-display-leading: 30px;
+    --chestersindia-body-size: 14px;
+    --chestersindia-body-leading: 20px;
+    --chestersindia-small-leading: 18px;
+  }
+  .chestersindia-page :is(.header-nav, .chestersindia-navigation-section, .eyebrow, .btn, .link-cta) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
 </style>
 </head>
 
-<body>
+<body class="chestersindia-page">
 
 <!-- ==================== HEADER ==================== -->
-<header class="site-header" id="siteHeader">
+<header class="site-header chestersindia-header-section" id="siteHeader">
   <nav class="header-nav header-nav--left" aria-label="Primary">
     <a href="https://chestersindia.com/collections/shop-all-products">Shop All</a>
     <a href="https://chestersindia.com/pages/upholstery-finishes">Upholstery &amp; Finishes</a>
@@ -336,7 +486,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid cur
   </button>
 </header>
 
-<div class="mobile-nav" id="mobileNav" role="dialog" aria-modal="true" aria-label="Navigation menu" hidden>
+<div class="mobile-nav chestersindia-navigation-section" id="mobileNav" role="dialog" aria-modal="true" aria-label="Navigation menu" hidden>
   <button class="close" id="navClose" type="button" aria-label="Close menu">&times;</button>
   <a href="https://chestersindia.com/collections/shop-all-products">Shop All</a>
   <a href="https://chestersindia.com/pages/upholstery-finishes">Upholstery &amp; Finishes</a>
@@ -346,10 +496,10 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid cur
   <a href="https://chestersindia.com/pages/contact-us">Contact</a>
 </div>
 
-<main>
+<main class="chestersindia-main">
 
 <!-- ==================== HERO ==================== -->
-<section class="hero">
+<div class="hero chestersindia-hero-section" role="region" aria-label="Hero">
   <img class="hero__img" src="https://chestersindia.com/cdn/shop/files/PRESIDENT-OFFICE-SWIVEL-CHAIR-VINTAGE-GREEN-2.jpg?v=1757668575&amp;width=1920"
        alt="President office swivel chair in vintage green by Chester's India" fetchpriority="high">
   <div class="container hero__inner">
@@ -358,10 +508,10 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid cur
     <p>Executive seating and upholstered furniture for CEO cabins, boardrooms and reception lounges — built in our own Bangalore workshops.</p>
     <a class="link-cta" href="https://chestersindia.com/pages/contact-us">Discuss Your Corporate Project</a>
   </div>
-</section>
+</div>
 
 <!-- ==================== INTRO / LEDE ==================== -->
-<section class="section section--intro">
+<div class="section section--intro chestersindia-about-section" role="region" aria-label="About Chester’s India">
   <div class="container">
     <div class="rich lede text-col">
       <p>At Chester's India, we make executive seating and upholstered furniture for premium corporate environments across India — CEO cabins, boardrooms, reception lounges, and the client-facing spaces where an organisation is at its most deliberate. Every piece is built in our own workshops in Bangalore, where woodworking, upholstery, and finishing happen under one roof. Which is why our furniture tends to look as though it was always meant for the room.</p>
@@ -372,12 +522,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid cur
       <a class="btn btn--primary" href="https://chestersindia.com/pages/contact-us">Discuss Your Corporate Project</a>
     </div>
   </div>
-</section>
+</div>
 
 <hr class="divider">
 
 <!-- ==================== ROOMS ==================== -->
-<section class="section">
+<div class="section chestersindia-spaces-section" role="region" aria-label="Corporate Spaces">
   <div class="container">
     <span class="eyebrow">Spaces</span>
     <h2>Designed for the Rooms Where Decisions Are Made</h2>
@@ -408,12 +558,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid cur
     </div>
     <p class="text-col" style="margin-top:2rem;color:var(--muted);">Among these spaces, seating plays the most visible role.</p>
   </div>
-</section>
+</div>
 
 <hr class="divider">
 
 <!-- ==================== SEATING / ENGINEERING (split) ==================== -->
-<section class="section">
+<div class="section chestersindia-products-section" role="region" aria-label="Executive Seating">
   <div class="container">
     <div class="split split--reverse">
       <div class="split__media">
@@ -433,12 +583,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid cur
     </div>
     <p class="text-col" style="margin-top:2.5rem;color:var(--muted);">Behind every chair and sofa lies a construction process that is rarely visible but always felt in daily use.</p>
   </div>
-</section>
+</div>
 
 <hr class="divider">
 
 <!-- ==================== MADE IN BANGALORE (split) ==================== -->
-<section class="section">
+<div class="section chestersindia-craftsmanship-section" role="region" aria-label="Our Craftsmanship">
   <div class="container">
     <div class="split">
       <div class="split__media">
@@ -455,12 +605,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid cur
       </div>
     </div>
   </div>
-</section>
+</div>
 
 <hr class="divider">
 
 <!-- ==================== DEVELOPED AROUND THE INTERIOR ==================== -->
-<section class="section">
+<div class="section chestersindia-trade-section" role="region" aria-label="Trade and Project Process">
   <div class="container">
     <span class="eyebrow">Bespoke</span>
     <h2>Developed Around the Interior and Its Purpose</h2>
@@ -508,26 +658,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid cur
       <a class="btn btn--ghost" href="https://chestersindia.com/pages/bespoke-furniture">Reach Our Trade Team</a>
     </div>
   </div>
-</section>
-
-<hr class="divider">
-
-<!-- ==================== FURNITURE INTENDED TO REMAIN ==================== -->
-<section class="section">
-  <div class="container">
-    <span class="eyebrow">Heritage</span>
-    <h2>Furniture Intended to Remain</h2>
-    <div class="rich text-col">
-      <p>Chester's origins date to 1986. In 1994, four experienced craftsmen trained in the Netherlands in the specialist manufacture of deep-buttoned leather furniture, strengthening the expertise behind the brand's Chesterfield tradition. Operating from its dedicated workshops in Peenya, Chester's maintains close control over frame-making, upholstery and finishing.</p>
-      <p>The resulting portfolio spans classic deep-buttoned Chesterfields to modern executive silhouettes. Built using full-grain European hides that develop rich character with age, every piece is supported by long-term restoration services that reject disposability in favour of lasting institutional ownership.</p>
-    </div>
-  </div>
-</section>
+</div>
 
 <hr class="divider">
 
 <!-- ==================== FAQ ==================== -->
-<section class="section">
+<div class="section chestersindia-faq-section" role="region" aria-label="Frequently Asked Questions">
   <div class="container">
     <span class="eyebrow">FAQ</span>
     <h2>Frequently Asked Questions</h2>
@@ -551,11 +687,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid cur
       </details>
     </div>
   </div>
-</section>
+</div>
 
 <!-- ==================== CLOSING CTA ==================== -->
 <hr class="divider">
-<section class="section closing">
+<div class="section closing chestersindia-contact-section" role="region" aria-label="Contact Our Team">
   <div class="container">
     <span class="eyebrow">Get in touch</span>
     <h2>Begin a Conversation About Your Workspace</h2>
@@ -563,12 +699,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid cur
     <p style="margin-top:1.25rem;">Send your floor plans, mood boards, quantities or preferred material palette to our trade team.</p>
     <a class="btn btn--ghost" href="https://chestersindia.com/pages/contact-us">Discuss Your Corporate Project</a>
   </div>
-</section>
+</div>
 
 </main>
 
 <!-- ==================== FOOTER ==================== -->
-<footer class="site-footer">
+<footer class="site-footer chestersindia-footer-section">
   <div class="container">
     <div class="footer-intro">
       <div>
