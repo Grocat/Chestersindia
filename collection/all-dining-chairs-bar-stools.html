@@ -934,7 +934,60 @@ section#products {
       padding: 12px;
       font-size: 18px
     }
+ .brdcrmb {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 13px;
+    font-family: Lusitana, Georgia, serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+        margin-top: 20px;
+  }
 
+  .brdcrmb ol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .brdcrmb li {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+.brdcrmb a {
+    color: #351419;
+    text-decoration: underline;
+}
+
+  .brdcrmb a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+
+  .brdcrmb a:focus-visible {
+    outline: 2px solid #b5ada3;
+    outline-offset: 3px;
+  }
+
+  .brdcrmb .brdcrmb-separator {
+    color: #8c8276;
+    flex-shrink: 0;
+  }
+
+  .brdcrmb [aria-current="page"] {
+    color: #000;
+    overflow-wrap: anywhere;
+  }
     .search-panel button[type=submit] {
       background: #351419;
       color: #fff;
@@ -1296,7 +1349,48 @@ section#products {
       </div>
     </section>
     <div class="content-shell">
-   
+
+   <div class="brdcrmb" aria-label="Breadcrumb">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+
+    <!-- Home -->
+    <li itemprop="itemListElement"
+        itemscope
+        itemtype="https://schema.org/ListItem">
+      <a itemprop="item" href="https://chestersindia.com/">
+        <span itemprop="name">Home</span>
+      </a>
+      <meta itemprop="position" content="1">
+    </li>
+
+    <!-- Collections -->
+    <li itemprop="itemListElement"
+        itemscope
+        itemtype="https://schema.org/ListItem">
+      <span class="brdcrmb-separator" aria-hidden="true">/</span>
+
+      <a itemprop="item"
+         href="https://chestersindia.com/collections/shop-all-products">
+        <span itemprop="name">Collections</span>
+      </a>
+      <meta itemprop="position" content="2">
+    </li>
+
+    <!-- Current page -->
+    <li itemprop="itemListElement"
+        itemscope
+        itemtype="https://schema.org/ListItem">
+      <span class="brdcrmb-separator" aria-hidden="true">/</span>
+
+      <span itemprop="name" aria-current="page">Dining Chairs &amp; Bar Stools</span>
+
+      <link itemprop="item"
+            href="https://chestersindia.com/collections/all-dining-chairs-bar-stools">
+      <meta itemprop="position" content="3">
+    </li>
+
+  </ol>
+</div>
       <section id="products" aria-labelledby="shop-title">
         <h2 id="shop-title" class="section-label">SHOP THE COLLECTION :</h2>
         <ul class="product-grid">
